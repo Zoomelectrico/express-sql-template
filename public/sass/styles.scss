@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500");
+
+$font: "Quicksand", sans-serif;
+$primary: #783f8e;
+$secondary: #75dddd;
+$black: #292929;
+$white: #fafafa;
+$grey: #5f5f5f;
+
+* {
+  font-family: $font;
+}
