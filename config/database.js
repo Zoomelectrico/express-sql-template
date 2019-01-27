@@ -1,8 +1,9 @@
 const Sequelize = require("sequelize");
 Sequelize.Promise = global.Promise;
-const { DATABASE, DB_USER, DB_PASSWORD } = process.env;
+
+const { DATABASE, DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 const sequelize = new Sequelize(DATABASE, DB_USER, DB_PASSWORD, {
-  host: "localhost",
+  host: DB_HOST,
   dialect: "mysql",
   pool: {
     max: 5,

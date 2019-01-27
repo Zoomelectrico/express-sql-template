@@ -2,6 +2,7 @@ require("dotenv").config({ path: "./variables.env" });
 const sequelize = require("./config/database");
 sequelize
   .authenticate()
+  .then(value => sequelize.sync())
   .then(value => value)
   .catch(err => {
     console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
